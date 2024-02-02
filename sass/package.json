@@ -1,0 +1,19 @@
+{
+  "name": "oc_project3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Junyoung190198/OC_Project3.git"
+  },
+  "author": "Kevan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Junyoung190198/OC_Project3/issues"
+  },
+  "homepage": "https://github.com/Junyoung190198/OC_Project3#readme"
+}
