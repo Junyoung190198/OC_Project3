@@ -69,13 +69,17 @@ $color-palette:(
 @mixin box-shadow($inset: out, $value: light){
     @if($inset == out){
         @if($value == heavy){
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+            box-shadow:  0 4px 8px 0 rgba(0,0,0,0.4);
+        }@else if($value == super-heavy){
+            box-shadow:  0 8px 16px 0 rgba(0,0,0,0.4);
         }@else{
-            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+            box-shadow:  0 2px 4px 0 rgba(0,0,0,0.2);
         }
     }@else{
         @if($value == heavy){
             box-shadow: inset 0 4px 8px 0 rgba(0,0,0,0.4);
+        }@else if($value == super-heavy){
+            box-shadow: inset 0 8px 16px 0 rgba(0,0,0,0.4);
         }@else{
             box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.2);
         }
@@ -91,7 +95,7 @@ $color-palette:(
 @mixin button($background-color, $color, $border-radius){
     @include color(color-background, $background-color);
     @include color(color, $color);
-    border-radius: 25%;
+    border-radius: $border-radius;
 }
 
 
@@ -110,16 +114,17 @@ body, p{
     @include font(font-weight, regular);
     @include font(font-size, normal);
 }
-
-h1, h2, h3, h4{
-    @include font(font-family, title);
+a{
+    text-decoration: none;
+    color: inherit;
 }
+
 
 .header{
     width: 100%;
     height: 6rem;
     @include color(color-background, white);
-    &__logo-card{
+    &__logo-wrapper{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -131,13 +136,13 @@ h1, h2, h3, h4{
         height: 50%;
         margin-top: 10px;
     }
-    &__location{
+    &__location-card{
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 5px;
         width: 100%;
-        height: 50%;
+        height: 40%;
         @include color(color-background, heavy-grey);
         @include box-shadow(in, light);
 
@@ -148,21 +153,32 @@ h1, h2, h3, h4{
 }
 
 .header-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
     width: 100%;
     height: 18rem;
-    padding: 15px 10px 15px 10px;
+    padding: 20px 25px 20px 25px;
     @include color(color-background, light-grey);
 
     &__text{
-
+        @include font(font-weight, light);
+        @include font(font-size, normal-plus);
     }
 
     &__explore-button{
-        width: 50%;
-        padding: 5px;
-        @include color(color-background, violet);
+        width: 70%;
+        padding: 15px;
+        @include button(pink,white, 25px);
+        @include box-shadow(out, heavy);
         &__text{
-            @include color(color, white);
+            @include font(font-size, regular);
+            @include font(font-weight, medium);
+        }
+        &:hover{
+            @include box-shadow(out, super-heavy);
         }
     }
 }
