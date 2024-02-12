@@ -35,30 +35,65 @@ $font-palette:(
 
 
 $color-palette:(
-    font:(
+    color:(
         violet: $color-primary,
         pink: $color-secondary,
         green: $color-tertiary,
-    ),
-    background:(
         white: $color-background-primary,
         light-grey: $color-background-secondary,
         heavy-grey: $color-background-tertiary,
     )
 );
 
-
-@mixin font-family($font){
-   font-family: $font;
+@mixin font($palette-type, $value){
+    $palette: map-get($map: $font-palette, $key: $palette-type);
+    
+    @if($palette-type == font-family){
+        font-family: map-get($map: $palette, $key: $value);
+    }@else if($palette-type == font-weight){
+        font-weight: map-get($map: $palette, $key: $value);
+    }@else if($palette-type == font-size){
+        font-size: map-get($map: $palette, $key: $value);
+    }
 }
 
-@mixin font-weight($weight){
-    font-weight: map-get($map: font-weight, $key: $weight);
+@mixin color($type, $value){
+    $palette: map-get($map: $color-palette, $key: color);
+    @if($type == color){
+        color: map-get($map: $palette, $key: $value)
+    }@else if($type == color-background){
+        background-color: map-get($map: $palette, $key: $value);
+    }
 }
 
-@mixin color($type){
-
+@mixin box-shadow($inset: out, $value: light){
+    @if($inset == out){
+        @if($value == heavy){
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+        }@else{
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+        }
+    }@else{
+        @if($value == heavy){
+            box-shadow: inset 0 4px 8px 0 rgba(0,0,0,0.4);
+        }@else{
+            box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.2);
+        }
+    }
 }
+
+@mixin reset-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@mixin button($background-color, $color, $border-radius){
+    @include color(color-background, $background-color);
+    @include color(color, $color);
+    border-radius: 25%;
+}
+
 
 *{
     margin: 0;
@@ -68,45 +103,68 @@ $color-palette:(
 
 body{
     box-sizing: border-box;
+}
 
-    @include font-family($font-family-secondary);
+body, p{
+    @include font(font-family, text);
+    @include font(font-weight, regular);
+    @include font(font-size, normal);
 }
 
 h1, h2, h3, h4{
-
-    @include font-family($font-family-primary);
+    @include font(font-family, title);
 }
 
 .header{
     width: 100%;
-    background-color: $color-background-primary;
     height: 6rem;
+    @include color(color-background, white);
     &__logo-card{
         display: flex;
         justify-content: center;
-        height: 55%;
+        align-items: center;
+        height: 60%;
         width: 100%;
-        
-        
-        
-        
     }
     &__logo-image{
         width: 50%;
-        height: 90%;
-        
+        height: 50%;
+        margin-top: 10px;
     }
     &__location{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
         width: 100%;
-        height: 45%;
-        background-color: $color-background-tertiary;
-        box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
-    }
+        height: 50%;
+        @include color(color-background, heavy-grey);
+        @include box-shadow(in, light);
 
+        &-text{
+            @include font(font-weight, medium);
+        }
+    }
 }
 
-.tamer{
-    font-size: 20px;
+.header-section{
+    width: 100%;
+    height: 18rem;
+    padding: 15px 10px 15px 10px;
+    @include color(color-background, light-grey);
+
+    &__text{
+
+    }
+
+    &__explore-button{
+        width: 50%;
+        padding: 5px;
+        @include color(color-background, violet);
+        &__text{
+            @include color(color, white);
+        }
+    }
 }
 
 
