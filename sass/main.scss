@@ -99,6 +99,7 @@ $color-palette:(
 }
 
 
+
 *{
     margin: 0;
     padding: 0;
@@ -118,6 +119,7 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
 
 
 .header{
@@ -146,8 +148,12 @@ a{
         @include color(color-background, heavy-grey);
         @include box-shadow(in, light);
 
-        &-text{
+        &-text{ /* Do it like this?? */
             @include font(font-weight, medium);
+        }
+
+        .fa-solid{
+            @include font(font-weight, light);
         }
     }
 }
@@ -183,4 +189,58 @@ a{
     }
 }
 
+.how-section{
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include color(color-background, white);
+    &__title{
+        width: 100%;
+        padding: 30px;
+    }
 
+    &__cards-wrapper{ /* Ask if need to indent or not?? */
+        margin: 0 30px 0 30px;
+        display: flex;
+    }
+
+
+    &__numbers{
+        flex: 0 1 10%;
+        height: 2rem;
+        align-self: center;
+        border-radius: 50%;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include color(color-background, violet);
+        @include color(color, white);
+    }
+
+    &__cards{
+        flex: 1 1 100%;
+        padding: 10px;
+        height: 4rem;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        border-radius: 20px;
+        @include box-shadow(out);
+        
+        i.fa-solid{ /* How to do this?? */
+            @include color(color, heavy-grey);
+            @include font(font-size, normal-plus);
+        }
+
+        &__text{
+            @include font(font-size, normal);
+            @include font(font-weight, bold);
+        }
+    }
+
+   
+}
