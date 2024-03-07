@@ -132,6 +132,7 @@ a{
         align-items: center;
         height: 60%;
         width: 100%;
+
     }
     &__logo-image{
         width: 50%;
@@ -148,13 +149,11 @@ a{
         @include color(color-background, heavy-grey);
         @include box-shadow(in, light);
 
-        &-text{ /* Do it like this?? */
+        &__text{ 
             @include font(font-weight, medium);
         }
 
-        .fa-solid{
-            @include font(font-weight, light);
-        }
+    
     }
 }
 
@@ -167,6 +166,7 @@ a{
     width: 100%;
     height: 18rem;
     padding: 20px 25px 20px 25px;
+    margin-bottom: 40px;
     @include color(color-background, light-grey);
 
     &__text{
@@ -177,8 +177,9 @@ a{
     &__explore-button{
         width: 70%;
         padding: 15px;
-        @include button(pink,white, 25px);
+        /* @include button(pink,white, 25px); */
         @include box-shadow(out, heavy);
+        background: linear-gradient(to top, $color-primary, $color-secondary);
         &__text{
             @include font(font-size, regular);
             @include font(font-weight, medium);
@@ -190,48 +191,45 @@ a{
 }
 
 .how-section{
-    width: 100%;
-    height: 40rem;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    
+    height: 35rem;
+    padding: 20px;
+   
     @include color(color-background, white);
     &__title{
         width: 100%;
-        padding: 30px;
+        padding-bottom: 30px;
     }
 
-    &__cards-wrapper{ /* Ask if need to indent or not?? */
-        margin: 0 30px 0 30px;
-        display: flex;
-    }
-
-
-    &__numbers{
-        flex: 0 1 10%;
-        height: 2rem;
-        align-self: center;
-        border-radius: 50%;
-        float: left;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @include color(color-background, violet);
-        @include color(color, white);
-    }
-
+    
     &__cards{
-        flex: 1 1 100%;
-        padding: 10px;
-        height: 4rem;
+        padding: 24px;
+        margin-bottom: 30px;
         display: flex;
         justify-content: start;
         align-items: center;
         gap: 20px;
         border-radius: 20px;
         @include box-shadow(out);
+        position: relative;
         
-        i.fa-solid{ /* How to do this?? */
+        &__numbers{
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -12px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include color(color-background, violet);
+            @include color(color, white);
+            @include font(font-size, very-small);
+        }
+        i.fa-solid{ /* change this!!! */
             @include color(color, heavy-grey);
             @include font(font-size, normal-plus);
         }
@@ -243,4 +241,8 @@ a{
     }
 
    
+}
+
+.icons{
+
 }
