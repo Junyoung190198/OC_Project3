@@ -1,0 +1,46 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-background-primary: #fff;
+$color-background-secondary: #F2F2F2;
+$color-background-tertiary: #EDEDED;
+
+
+$font-family-primary: 'Shrikhand', serif;
+$font-family-secondary: 'Roboto' , sans-serif;
+
+
+$font-palette:(
+    font-family:(
+        title: $font-family-primary,
+        text: $font-family-secondary,
+    ),
+    font-weight:(
+        thin: 100,
+        light: 300,
+        regular: 400,
+        medium: 500,
+        bold: 700,
+        black: 900
+    ),
+    font-size:(
+        very-small: 12px,
+        small: 14px,
+        normal: 16px,
+        normal-plus: 18px,
+        big: 20px,
+        very-big: 24px,
+    )
+);
+
+
+$color-palette:(
+    color:(
+        violet: $color-primary,
+        pink: $color-secondary,
+        green: $color-tertiary,
+        white: $color-background-primary,
+        light-grey: $color-background-secondary,
+        heavy-grey: $color-background-tertiary,
+    )
+);
