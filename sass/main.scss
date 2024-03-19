@@ -1,29 +1,9 @@
-
-
-
-
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-body{
-    box-sizing: border-box;
-}
-
-body, p{
-    @include font(font-family, text);
-    @include font(font-weight, regular);
-    @include font(font-size, normal);
-}
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/functions";
+@import "./utils/placeholders";
+@import "./base/base";
+@import "./base/typography";
 
 
 .header{
@@ -84,7 +64,7 @@ a{
         /* @include button(pink,white, 25px); */
         @include box-shadow(out, heavy);
         background: linear-gradient(to top, $color-primary, $color-secondary);
-        @include color();
+        
         &__text{
             @include font(font-size, regular);
             @include font(font-weight, medium);
@@ -148,6 +128,3 @@ a{
    
 }
 
-.icons{
-
-}

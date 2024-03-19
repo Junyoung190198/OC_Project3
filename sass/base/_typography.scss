@@ -1,0 +1,15 @@
+
+body, p{
+    @include font(font-family, text);
+    @include font(font-weight, regular);
+    @include font(font-size, normal);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.icons{
+
+}

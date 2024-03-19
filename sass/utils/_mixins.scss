@@ -1,0 +1,52 @@
+@mixin font($palette-type, $value){
+    $palette: map-get($map: $font-palette, $key: $palette-type);
+    
+    @if($palette-type == font-family){
+        font-family: map-get($map: $palette, $key: $value);
+    }@else if($palette-type == font-weight){
+        font-weight: map-get($map: $palette, $key: $value);
+    }@else if($palette-type == font-size){
+        font-size: map-get($map: $palette, $key: $value);
+    }
+}
+
+@mixin color($type, $value){
+    $palette: map-get($map: $color-palette, $key: color);
+    @if($type == color){
+        color: map-get($map: $palette, $key: $value)
+    }@else if($type == color-background){
+        background-color: map-get($map: $palette, $key: $value);
+    }
+}
+
+@mixin box-shadow($inset: out, $value: light){
+    @if($inset == out){
+        @if($value == heavy){
+            box-shadow:  0 4px 8px 0 rgba(0,0,0,0.4);
+        }@else if($value == super-heavy){
+            box-shadow:  0 8px 16px 0 rgba(0,0,0,0.4);
+        }@else{
+            box-shadow:  0 2px 4px 0 rgba(0,0,0,0.2);
+        }
+    }@else{
+        @if($value == heavy){
+            box-shadow: inset 0 4px 8px 0 rgba(0,0,0,0.4);
+        }@else if($value == super-heavy){
+            box-shadow: inset 0 8px 16px 0 rgba(0,0,0,0.4);
+        }@else{
+            box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.2);
+        }
+    }
+}
+
+@mixin reset-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@mixin button($background-color, $color, $border-radius){
+    @include color(color-background, $background-color);
+    @include color(color, $color);
+    border-radius: $border-radius;
+}
