@@ -2,9 +2,11 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-background-primary: #fff;
-$color-background-secondary: #F2F2F2;
+$color-background-secondary: #F7F7F7;
 $color-background-tertiary: #EDEDED;
-
+$color-background-fourth: #FBF2FF;
+$color-icon-primary: #8B8B8B;
+$color-icon-secondary: #343434;
 
 $font-family-primary: 'Shrikhand', serif;
 $font-family-secondary: 'Roboto' , sans-serif;
@@ -38,9 +40,12 @@ $color-palette:(
     color:(
         violet: $color-primary,
         pink: $color-secondary,
+        light-pink: $color-background-fourth,
         green: $color-tertiary,
         white: $color-background-primary,
         light-grey: $color-background-secondary,
         heavy-grey: $color-background-tertiary,
+        light-grey-icon: $color-icon-primary,
+        heavy-grey-icon: $color-icon-secondary,
     )
 );
