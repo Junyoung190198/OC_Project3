@@ -37,15 +37,39 @@ $font-palette:(
 
 
 $color-palette:(
-    color:(
-        violet: $color-primary,
-        pink: $color-secondary,
-        light-pink: $color-background-fourth,
-        green: $color-tertiary,
-        white: $color-background-primary,
-        light-grey: $color-background-secondary,
-        heavy-grey: $color-background-tertiary,
-        light-grey-icon: $color-icon-primary,
-        heavy-grey-icon: $color-icon-secondary,
+    violet: $color-primary,
+    pink: $color-secondary,
+    green: $color-tertiary,
+
+    white: $color-background-primary,
+    light-grey: $color-background-secondary,
+    heavy-grey: $color-background-tertiary,
+    light-pink: $color-background-fourth,
+
+    light-grey-icon: $color-icon-primary,
+    heavy-grey-icon: $color-icon-secondary,
+);
+
+$spacing-palette:(
+    px:(
+        10: 10px,
+        15: 15px,
+        20: 20px,
+        24: 24px,
+        25: 25px,
+        30: 30px,
+        35: 35px,
+        40: 40px,
+        50: 50px,
+    ),
+
+    percent:(
+        10: 10%,
+        15: 15%,
+        20: 20%,
+        25: 25%,
+        30: 30%,
+        35: 35%,
+        40: 40%,
     )
 );

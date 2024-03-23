@@ -1,26 +1,25 @@
 .header{
     width: 100%;
-    @include color(color-background, white);
+    @include color(background-color, white);
     &__logo-wrapper{
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 10px;
+        @include spacing(padding, px, 10);
     }
     &__logo-image{
         width: 140px;
         height: 50%;
-        margin-top: 10px;
+        @include spacing(padding, px, 10, top);
     }
     &__location-card{
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 15px;
         width: 100%;
-        padding: 15px;
-        
-        @include color(color-background, heavy-grey);
+        @include spacing(gap, px, 15);
+        @include spacing(padding, px, 15);
+        @include color(background-color, heavy-grey);
         @include box-shadow(in, light);
 
         &__icons{
@@ -31,8 +30,6 @@
         &__text{ 
             @include font(font-weight, medium);
         }
-
-    
     }
 }
 
@@ -41,11 +38,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 40px;
     width: 100%;
-    padding: 40px 25px 50px 25px;
-    margin-bottom: 30px;
-    @include color(color-background, light-grey);
+    @include spacing(gap, px, 40);
+    @include spacing(padding, px, 40, top);
+    @include spacing(padding, px, 25, right);
+    @include spacing(padding, px, 50, bottom);
+    @include spacing(padding, px, 25, left);
+    @include spacing(margin, px, 30, bottom);
+    @include color(background-color, light-grey);
 
     &__text{
         @include font(font-weight, light);
@@ -54,7 +54,7 @@
 
     &__explore-button{
         width: 70%;
-        padding: 15px;
+        @include spacing(padding, px, 15);
         @include button(pink,white, 25px); 
         @include box-shadow(out, heavy);
         background: linear-gradient(to top, $color-primary, $color-secondary);
@@ -70,25 +70,23 @@
 }
 
 .how-section{
-    padding: 20px;
-    padding-bottom: 40px;
-
-   
-    @include color(color-background, white);
+    @include spacing(padding, px, 20);
+    @include spacing(padding, px, 40, bottom);
+    @include color(background-color, white);
+    
     &__title{
-        width: 100%;
-        padding-bottom: 30px;
+        @include title-section();
     }    
     &__cards{
-        padding: 24px;
-        margin-bottom: 30px;
+        @include spacing(padding, px, 24);
+        @include spacing(margin, px, 30, bottom);
         display: flex;
         justify-content: start;
         align-items: center;
-        gap: 30px;
+        @include spacing(gap, px, 30);
         border-radius: 20px;
         @include box-shadow(out, light);
-        @include color(color-background, light-grey);
+        @include color(background-color, light-grey);
         position: relative;
         
         &__numbers{
@@ -102,7 +100,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            @include color(color-background, violet);
+            @include color(background-color, violet);
             @include color(color, white);
             @include font(font-size, very-small);
         }
@@ -110,7 +108,7 @@
         &__icons{ 
             @include color(color, light-grey-icon);
             @include font(font-size, normal-plus);
-            padding-left: 10px;
+            @include spacing(padding, px, 10, left);
         }
 
         
@@ -122,7 +120,7 @@
     }  
 
     &__cards:nth-child(4){
-        @include color(color-background, light-pink);
+        @include color(background-color, light-pink);
         .how-section__cards__icons{
             @include color(color, violet);
         }
@@ -131,15 +129,24 @@
 
 .restaurant-section{
     width: 100%;
-    @include color(color-background, light-grey);
+    @include color(background-color, light-grey);
+    @include spacing(padding, px, 20);
+    @include spacing(padding, px, 50, top);
+    @include spacing(padding, px, 40, bottom);
     
 
+    &__title{
+       @include title-section();
+    }
+
     &__cards{
+        border-radius: 25px;
+        height: 280px;
+        @include color(background-color, white);
+        @include spacing(margin, px, 20, bottom);
 
         &__images{
-            width: 100%;
-            height: 70%;
-            object-fit: cover;
+            @include image-cards();
         }
 
         &__new-sticker{
@@ -147,6 +154,11 @@
         }
 
         &__text{
+
+
+            &__icons{
+
+            }
 
         }
 
