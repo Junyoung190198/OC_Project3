@@ -11,6 +11,7 @@
         width: 140px;
         height: 50%;
         @include spacing(padding, px, 10, top);
+        @include spacing(padding,px,5,bottom);
     }
     &__location-card{
         display: flex;
@@ -197,6 +198,7 @@
 
 
 .footer{
+    width: 100%;
     background-color:lightness-shift(lighten, $color-background-fifth, 20%);
     @include color(color, white);
     @include spacing(padding, px, 20);
@@ -216,8 +218,5 @@
             @include font(font-size, very-small);
             @include spacing(padding, px, 5, right);
         }
-            
-            
-        
     }
 }

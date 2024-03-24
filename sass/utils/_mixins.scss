@@ -46,8 +46,8 @@
     list-style: none;
 }
 
-@mixin button($background-color, $color, $border-radius){
-    @include color(color-background, $background-color);
+@mixin button($background, $color, $border-radius){
+    @include color(background-color, $background);
     @include color(color, $color);
     border-radius: $border-radius;
 }
