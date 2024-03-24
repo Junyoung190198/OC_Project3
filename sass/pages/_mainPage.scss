@@ -140,31 +140,84 @@
     }
 
     &__cards{
-        border-radius: 25px;
-        height: 280px;
+        border-radius: 15px;
+        height: 250px;
         @include color(background-color, white);
         @include spacing(margin, px, 20, bottom);
+        @include box-shadow();
+        position: relative;
 
         &__images{
             @include image-cards();
         }
 
         &__new-sticker{
-
+            width: 25%;
+            border-radius: 3px;
+            @include color(background-color, green);
+            color:lightness-shift(darken, $color-tertiary, 40%);
+            @include font(font-weight, bold);
+            @include spacing(padding, px, 5);
+            text-align: center;
+            position: absolute;
+            top: 20px;
+            right: 10px;
         }
 
         &__text{
-
-
-            &__icons{
-
+            @include spacing(padding, px, 10);
+            
+            &__title{
+                @include spacing(padding, px, 5, bottom);
             }
 
+            &__city{
+                @include font(font-size, normal-plus);
+            }
+
+            &__icon-wrapper{
+                position: absolute;
+                right: 20px;
+                bottom: 25px;
+            }
+
+            &__icons{
+                @include font(font-size, very-big);
+                @include font(font-weight, regular);
+               
+                
+                &:hover{
+                    @include font(font-weight, bold);
+                    @include color(color, violet);
+                }  
+            }
         }
+    }
+}
 
 
+.footer{
+    background-color:lightness-shift(lighten, $color-background-fifth, 20%);
+    @include color(color, white);
+    @include spacing(padding, px, 20);
+
+    &__title{
+        @include font(font-family, title);
+        @include font(font-weight, regular);
+        @include font(font-size, normal-plus);
+        @include spacing(padding, px, 20, bottom);
+        @include spacing(padding, px, 10, top);
     }
 
+    &__list{
+        @include spacing(padding, px, 10, bottom);
 
-
+        &__icons{
+            @include font(font-size, very-small);
+            @include spacing(padding, px, 5, right);
+        }
+            
+            
+        
+    }
 }

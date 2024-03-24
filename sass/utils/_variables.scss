@@ -1,10 +1,12 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$color-fourth: linear-gradient(to top, $color-primary, $color-secondary);
 $color-background-primary: #fff;
 $color-background-secondary: #F7F7F7;
 $color-background-tertiary: #EDEDED;
 $color-background-fourth: #FBF2FF;
+$color-background-fifth: #000;
 $color-icon-primary: #8B8B8B;
 $color-icon-secondary: #343434;
 
@@ -40,11 +42,13 @@ $color-palette:(
     violet: $color-primary,
     pink: $color-secondary,
     green: $color-tertiary,
+    violet-pink: $color-fourth,
 
     white: $color-background-primary,
     light-grey: $color-background-secondary,
     heavy-grey: $color-background-tertiary,
     light-pink: $color-background-fourth,
+    black: $color-background-fifth,
 
     light-grey-icon: $color-icon-primary,
     heavy-grey-icon: $color-icon-secondary,
@@ -52,6 +56,7 @@ $color-palette:(
 
 $spacing-palette:(
     px:(
+        5: 5px,
         10: 10px,
         15: 15px,
         20: 20px,

@@ -10,3 +10,10 @@ a{
     color: inherit;
 }
 
+li{ 
+    list-style: none;
+}
+
+ul{
+    @include spacing(padding, px, 0);
+}
