@@ -29,28 +29,29 @@
 
     &__image{
         width: 100%;
-        height: 300px;
+        height: 250px;
         object-fit: cover;
     }
 
     &__dishes{
         position: relative;
         @include spacing(padding, px, 20);
-        @include spacing(padding, px, 50, top);
-        @include spacing(padding, px, 40, bottom);
+        @include spacing(padding, px, 40, top);
+        @include spacing(padding, px, 20, bottom);
         @include color(background-color, light-grey);
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
+        @include spacing(margin,px, 60Minus,top);
 
         &__title{
             @include spacing(margin, px, 0);
-            @include spacing(padding, px, 20, bottom);
+            @include spacing(padding, px, 40, bottom);
             @include font(font-family, title);
         }
 
         &__icons{
             position: absolute;
-            top: 60px;
+            top: 42px;
             right: 40px;
             @include font(font-size, very-big);
             @include font(font-weight, regular); 
@@ -58,12 +59,13 @@
 
         &__under-title{
             @include spacing(padding, px, 5, bottom);
+            @include spacing(padding, px, 10, top);
         }
 
         &__green-line{
             width: 35px;
             border: 2px solid $color-tertiary;
-            @include spacing(margin, px, 20, bottom);
+            @include spacing(margin, px, 15, bottom);
         }
 
         &__cards{
@@ -79,12 +81,12 @@
             }
 
             &__text{
-                
+                @include font(font-size, small);
             }
 
             &__price{
                 position: absolute;
-                right: 10px;
+                right: 20px;
                 bottom: 10px;
             }
         }
@@ -107,7 +109,7 @@
                 @include font(font-weight, medium);
             }
             &:hover{
-                @include box-shadow(out, super-heavy);
+                opacity: 0.5;
             }
             }
         }

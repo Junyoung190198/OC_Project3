@@ -65,7 +65,7 @@
             @include font(font-weight, medium);
         }
         &:hover{
-            @include box-shadow(out, super-heavy);
+            opacity: 0.5;
         }
     }
 }
