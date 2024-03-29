@@ -1,0 +1,127 @@
+
+@media (min-width: 690px) and (max-width: 992px){
+
+    .header{
+        &__logo-image{
+            width: 280px;
+        }
+
+        &__location-card{
+            @include spacing(padding, px, 20);
+    
+            &__text{ 
+                @include font(font-size, big);
+            }
+        }
+    }
+
+    .nav{
+        @include spacing(gap, px, 60);
+        @include spacing(padding, px, 60, top);
+        @include spacing(padding, px, 80, bottom);
+
+        &__explore-button{
+            width: 40%;
+        }
+    }
+
+    .how-section{
+        @include spacing(padding, px, 40);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &__title{
+            @include title-section-tablet();
+        }    
+        &__cards{
+            width: 70%;
+            @include spacing(margin, px, 40, bottom);
+            justify-content: center;
+            @include spacing(gap, px, 40);
+            position: relative;
+            
+            &__icons{ 
+                @include font(font-size, big);
+                position: absolute;
+                left: 60px;
+            }
+    
+            &__text{
+                @include font(font-size, normal-plus);
+                
+            }
+        }
+    }
+
+    .restaurant-section{
+        @include spacing(padding, px, 60, top);
+        @include spacing(padding, px, 50, bottom);
+        display: flex;
+        flex-wrap: wrap;
+        @include spacing(gap, px, 30);
+        
+        &__title{
+           @include title-section-tablet();
+        }
+    
+        &__cards{
+            height: 300px;
+            @include spacing(margin, px, 40, bottom);
+            position: relative;
+    
+            &__text{
+                @include spacing(padding, px, 10);
+                
+                &__title{
+                    @include spacing(padding, px, 5, bottom);
+                }
+    
+                &__city{
+                    @include font(font-size, normal-plus);
+                }
+    
+                &__icon-wrapper{
+                    position: absolute;
+                    right: 20px;
+                    bottom: 25px;
+                }
+    
+                &__icons{
+                    @include font(font-size, very-big);
+                    @include font(font-weight, regular);
+                    background: linear-gradient(to top, $color-primary, $color-secondary);
+                    
+    
+                    
+                
+                    &:hover{
+                        @include heartIcons-linear();
+                    }  
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

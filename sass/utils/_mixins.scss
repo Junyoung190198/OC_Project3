@@ -89,8 +89,16 @@
 }
 
 @mixin title-section(){
-    width: 100%;
+    flex: 1 1 100%;
     @include spacing(padding, px, 30, bottom);
+}
+
+@mixin title-section-tablet(){
+    flex: 1 1 100%;
+    @include spacing(padding, px, 50, bottom);
+    @include font(font-size,title-big);
+    @include spacing(padding, percent,40 ,left)
+    
 }
 
 @mixin image-cards(){
@@ -99,6 +107,10 @@
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+}
+
+@mixin heartIcons-linear(){
+    
 }
 
 

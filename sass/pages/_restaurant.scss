@@ -1,21 +1,6 @@
 .header{
-    width: 100%;
-    @include color(background-color, white);
     position: relative;
-    &__logo-wrapper{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        @include spacing(padding, px, 10);
-        
-    }
-    &__logo-image{
-        width: 140px;
-        height: 50%;
-        @include spacing(padding, px, 10, top);
-        @include spacing(padding,px,5,bottom);
-    }
-    
+ 
     &__icons{
         @include font(font-size, big);
         position: absolute;
@@ -116,26 +101,8 @@
     }
 }
 
-.footer{
-    width: 100%;
-    background-color:lightness-shift(lighten, $color-background-fifth, 20%);
-    @include color(color, white);
-    @include spacing(padding, px, 20);
+@import "./tablet/restaurant-tablet";
+@import "./desktop/restaurant-desktop";
 
-    &__title{
-        @include font(font-family, title);
-        @include font(font-weight, regular);
-        @include font(font-size, normal-plus);
-        @include spacing(padding, px, 20, bottom);
-        @include spacing(padding, px, 10, top);
-    }
 
-    &__list{
-        @include spacing(padding, px, 10, bottom);
 
-        &__icons{
-            @include font(font-size, very-small);
-            @include spacing(padding, px, 5, right);
-        }
-    }
-}

@@ -34,6 +34,7 @@ $font-palette:(
         normal-plus: 18px,
         big: 20px,
         very-big: 24px,
+        title-big: 28px,
     )
 );
 
@@ -67,6 +68,9 @@ $spacing-palette:(
         35: 35px,
         40: 40px,
         50: 50px,
+        60: 60px,
+        70: 70px,
+        80: 80px,
         10Minus: -10px,
         15Minus: -15px,
         20Minus: -20px,
@@ -83,5 +87,7 @@ $spacing-palette:(
         30: 30%,
         35: 35%,
         40: 40%,
+        45: 45%,
+        50: 50%,
     )
 );
