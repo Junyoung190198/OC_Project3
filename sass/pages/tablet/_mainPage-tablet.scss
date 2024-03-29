@@ -1,5 +1,5 @@
 
-@media (min-width: 690px) and (max-width: 992px){
+@media (min-width: 768px) and (max-width: 992px){
 
     .header{
         &__logo-image{
@@ -20,13 +20,26 @@
         @include spacing(padding, px, 60, top);
         @include spacing(padding, px, 80, bottom);
 
+        &__title{
+            @include font(font-size, title-big);
+        }
+
+        &__text{
+            @include font(font-size, big);
+        }
+
         &__explore-button{
             width: 40%;
+
+            &__text{
+                @include font(font-size, normal-plus);
+            }
         }
     }
 
     .how-section{
         @include spacing(padding, px, 40);
+        
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -34,6 +47,7 @@
         
         &__title{
             @include title-section-tablet();
+            text-align: center;
         }    
         &__cards{
             width: 70%;
@@ -56,19 +70,22 @@
     }
 
     .restaurant-section{
-        @include spacing(padding, px, 60, top);
+        @include spacing(padding, px, 40, top);
         @include spacing(padding, px, 50, bottom);
+        @include spacing(margin, px, 0, bottom);
         display: flex;
         flex-wrap: wrap;
-        @include spacing(gap, px, 30);
+        @include spacing(gap, px, 20);
         
         &__title{
            @include title-section-tablet();
+           text-align: center;
         }
     
         &__cards{
-            height: 300px;
-            @include spacing(margin, px, 40, bottom);
+            flex: 1 1 335px;
+            height: 280px;
+            @include spacing(margin, px, 0);
             position: relative;
     
             &__text{
@@ -92,11 +109,8 @@
                     @include font(font-size, very-big);
                     @include font(font-weight, regular);
                     background: linear-gradient(to top, $color-primary, $color-secondary);
-                    
-    
-                    
                 
-                    &:hover{
+                    &:hover{ // Do when know ~~
                         @include heartIcons-linear();
                     }  
                 }
@@ -107,7 +121,9 @@
 
 
 
-
+.footer{
+    text-align: center;
+}
 
 
 

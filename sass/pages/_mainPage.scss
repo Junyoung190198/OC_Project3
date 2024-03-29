@@ -4,6 +4,7 @@
     &__logo-wrapper{
         display: flex;
         justify-content: center;
+        align-items: center;
         width: 100%;
         @include spacing(padding, px, 10);
     }
@@ -41,11 +42,9 @@
     text-align: center;
     width: 100%;
     @include spacing(gap, px, 40);
+    @include spacing(padding, px, 25);
     @include spacing(padding, px, 40, top);
-    @include spacing(padding, px, 25, right);
     @include spacing(padding, px, 50, bottom);
-    @include spacing(padding, px, 25, left);
-    @include spacing(margin, px, 30, bottom);
     @include color(background-color, light-grey);
 
     &__text{
@@ -73,6 +72,7 @@
 .how-section{
     @include spacing(padding, px, 20);
     @include spacing(padding, px, 40, bottom);
+    @include spacing(padding, px, 50, top);
     @include color(background-color, white);
     
     &__title{
@@ -134,8 +134,7 @@
     @include spacing(padding, px, 20);
     @include spacing(padding, px, 50, top);
     @include spacing(padding, px, 40, bottom);
-    display: flex;
-    flex-wrap: wrap;
+    @include spacing(gap, px, 10);
 
     
 
@@ -145,7 +144,7 @@
 
     &__cards{
         border-radius: 15px;
-        flex: 0 1 390px;
+        flex: 1 1 250px;
         height: 250px;
         @include color(background-color, white);
         @include spacing(margin, px, 20, bottom);

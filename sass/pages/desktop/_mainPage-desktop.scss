@@ -1,3 +1,47 @@
-@media all and (min-width: 768px){
+@media all and (min-width: 992px){
+    .header{
+        &--wrapper{
+            display: flex;
+        }
+
+        &__logo-wrapper{
+            flex-direction: 0 1 40%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            width: 100%;
+            @include spacing(padding, px, 10);
+        }
+        &__logo-image{
+            width: 392px;
+            height: 60%;
+            @include spacing(padding, px, 10, top);
+            @include spacing(padding,px,5,bottom);
+        }
+        &__location-card{
+            flex: 0 1 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include spacing(gap, px, 15);
+            @include spacing(padding, px, 15);
+            @include color(background-color, heavy-grey);
+            @include box-shadow(in, light);
+    
+            &__icons{
+                @include color(color, heavy-grey-icon);
+                @include font(font-size, normal-plus);
+            }
+    
+            &__text{ 
+                @include font(font-weight, medium);
+            }
+        }
+    }
+
+
+
+
+
 
 }

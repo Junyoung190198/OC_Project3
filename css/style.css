@@ -34,6 +34,7 @@ ul {
 .header__logo-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   padding: 10px;
 }
@@ -68,11 +69,9 @@ ul {
   text-align: center;
   width: 100%;
   gap: 40px;
+  padding: 25px;
   padding-top: 40px;
-  padding-right: 25px;
   padding-bottom: 50px;
-  padding-left: 25px;
-  margin-bottom: 30px;
   background-color: #F7F7F7;
 }
 .nav__text {
@@ -98,6 +97,7 @@ ul {
 .how-section {
   padding: 20px;
   padding-bottom: 40px;
+  padding-top: 50px;
   background-color: #fff;
 }
 .how-section__title {
@@ -153,8 +153,7 @@ ul {
   padding: 20px;
   padding-top: 50px;
   padding-bottom: 40px;
-  display: flex;
-  flex-wrap: wrap;
+  gap: 10px;
 }
 .restaurant-section__title {
   flex: 1 1 100%;
@@ -162,7 +161,7 @@ ul {
 }
 .restaurant-section__cards {
   border-radius: 15px;
-  flex: 0 1 390px;
+  flex: 1 1 250px;
   height: 250px;
   background-color: #fff;
   margin-bottom: 20px;
@@ -228,7 +227,7 @@ ul {
   padding-right: 5px;
 }
 
-@media (min-width: 690px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .header__logo-image {
     width: 280px;
   }
@@ -243,8 +242,17 @@ ul {
     padding-top: 60px;
     padding-bottom: 80px;
   }
+  .nav__title {
+    font-size: 28px;
+  }
+  .nav__text {
+    font-size: 20px;
+  }
   .nav__explore-button {
     width: 40%;
+  }
+  .nav__explore-button__text {
+    font-size: 18px;
   }
   .how-section {
     padding: 40px;
@@ -257,7 +265,7 @@ ul {
     flex: 1 1 100%;
     padding-bottom: 50px;
     font-size: 28px;
-    padding-left: 40%;
+    text-align: center;
   }
   .how-section__cards {
     width: 70%;
@@ -275,21 +283,23 @@ ul {
     font-size: 18px;
   }
   .restaurant-section {
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 50px;
+    margin-bottom: 0px;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
   }
   .restaurant-section__title {
     flex: 1 1 100%;
     padding-bottom: 50px;
     font-size: 28px;
-    padding-left: 40%;
+    text-align: center;
   }
   .restaurant-section__cards {
-    height: 300px;
-    margin-bottom: 40px;
+    flex: 1 1 335px;
+    height: 280px;
+    margin: 0px;
     position: relative;
   }
   .restaurant-section__cards__text {
@@ -310,6 +320,46 @@ ul {
     font-size: 24px;
     font-weight: 400;
     background: linear-gradient(to top, #9356DC, #FF79DA);
+  }
+}
+.footer {
+  text-align: center;
+}
+
+@media all and (min-width: 992px) {
+  .header--wrapper {
+    display: flex;
+  }
+  .header__logo-wrapper {
+    flex-direction: 0 1 40%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+  .header__logo-image {
+    width: 392px;
+    height: 60%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+  .header__location-card {
+    flex: 0 1 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: #EDEDED;
+    box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .header__location-card__icons {
+    color: #343434;
+    font-size: 18px;
+  }
+  .header__location-card__text {
+    font-weight: 500;
   }
 }
 .header {
