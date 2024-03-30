@@ -21,96 +21,102 @@ family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="s
 <body>
 
     <header class="header">
-        <div class="header--wrapper">
-            <a href="./index.html" class="header__logo-wrapper">
-            <img class="header__logo-image" src="images/logo/ohmyfood.png" alt="Logo"> <!-- explain again the SVG! --> 
+        <div class="header__logo-wrapper">
+            <a href="./index.html">
+                <img class="header__logo-image" src="images/logo/ohmyfood.png" alt="Logo"> <!-- explain again the SVG! --> 
             </a>
-            <div class="header__location-card"> 
-                <i class="fa-solid fa-location-dot icons header__location-card__icons"></i>
-                <p class="header__location-card__text">Paris, Belleville</p>                           
-            </div>
-    </div>
+        </div>
+        
+        <div class="header__location-card header__location-card--desktop"> 
+            <i class="fa-solid fa-location-dot icons header__location-card__icons"></i>
+            <p class="header__location-card__text">Paris, Belleville</p>                           
+        </div>
     </header>
 
+    <div class="nav__wrapper">
+        <nav class="nav nav--desktop">
+            <h2 class="nav__title">Book the menu you like</h2>
+            <p class="nav__text">Discover top-of-the-art restaurants we picked for you</p>
+            <a class="nav__explore-button" href="#">
+                <p class="nav__explore-button__text">Explore our restaurants</p>
+            </a>
+        </nav>
+    </div>
+    
 
-    <nav class="nav">
-    <h2 class="nav__title">Book the menu you like</h2>
-    <p class="nav__text">Discover top-of-the-art restaurants we picked for you</p>
-    <a class="nav__explore-button" href="#">
-       <p class="nav__explore-button__text">Explore our restaurants</p>
-    </a>
-</nav>
-
-
-    <section class="how-section">
-        <h2 class="how-section__title">How it works</h2>
-        
-        <div class="how-section__cards">
-            <div class="how-section__cards__numbers ">1</div>
-            <i class="fa-solid fa-mobile-screen-button how-section__cards__icons"></i>
-            <p class="how-section__cards__text">Chose a restaurant</p>
-        </div>
-        
-        <div class="how-section__cards">
-            <div class="how-section__cards__numbers">2</div>
-            <i class="fa-solid fa-list-ul how-section__cards__icons"></i>
-            <p class="how-section__cards__text">Create your menu</p>
-        </div>
-        
-        <div class="how-section__cards">
-            <div class="how-section__cards__numbers">3</div>
-            <i class="fa-solid fa-store how-section__cards__icons"></i>
-            <p class="how-section__cards__text">Go enjoy it at the restaurant</p>
-        </div>
-    </section>
-
-
-
-    <section class="restaurant-section">
-        <h2 class="restaurant-section__title">Restaurants</h2>
-
-        <article class="restaurant-section__cards"> 
-            <img class="restaurant-section__cards__images" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
-            <div class="restaurant-section__cards__new-sticker">
-                New 
+    <div class="main-sections-wrapper">
+        <section class="how-section">
+            <h2 class="how-section__title">How it works</h2>
+            
+            <div class="how-section__cards">
+                <div class="how-section__cards__numbers ">1</div>
+                <i class="fa-solid fa-mobile-screen-button how-section__cards__icons"></i>
+                <p class="how-section__cards__text">Chose a restaurant</p>
             </div>
-            <div class="restaurant-section__cards__text">
-                <h3 class="restaurant-section__cards__text__title">The full Palette</h3> 
-                <p class="restaurant-section__cards__text__city">New York</p>            <!--Background-clip?? How??-->
-                <a class="restaurant-section__cards__text__icon-wrapper" href="#"><i class="fa-solid fa-heart restaurant-section__cards__text__icons"></i></a>
+            
+            <div class="how-section__cards">
+                <div class="how-section__cards__numbers">2</div>
+                <i class="fa-solid fa-list-ul how-section__cards__icons"></i>
+                <p class="how-section__cards__text">Create your menu</p>
             </div>
-        </article>
+            
+            <div class="how-section__cards">
+                <div class="how-section__cards__numbers">3</div>
+                <i class="fa-solid fa-store how-section__cards__icons"></i>
+                <p class="how-section__cards__text">Go enjoy it at the restaurant</p>
+            </div>
+        </section>
+    
+    
+    
+        <section class="restaurant-section">
+            <h2 class="restaurant-section__title">Restaurants</h2>
+    
+            <article class="restaurant-section__cards"> 
+                <img class="restaurant-section__cards__images" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+                <div class="restaurant-section__cards__new-sticker">
+                    New 
+                </div>
+                <div class="restaurant-section__cards__text">
+                    <h3 class="restaurant-section__cards__text__title">The full Palette</h3> 
+                    <p class="restaurant-section__cards__text__city">New York</p>            <!--Background-clip?? How??-->
+                    <a class="restaurant-section__cards__text__icon-wrapper" href="#"><i class="fa-solid fa-heart restaurant-section__cards__text__icons"></i></a>
+                </div>
+            </article>
+    
+            <article class="restaurant-section__cards">
+                <img class="restaurant-section__cards__images" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
+                <div class="restaurant-section__cards__new-sticker">
+                    New 
+                </div>
+                <div class="restaurant-section__cards__text">
+                    <h3 class="restaurant-section__cards__text__title">The Enchanted Plate</h3> 
+                    <p class="restaurant-section__cards__text__city">New York</p>
+                    <a class="restaurant-section__cards__text__icon-wrapper" href="#"><i class="fa-solid fa-heart restaurant-section__cards__text__icons"></i></a>
+                </div>
+            </article>
+    
+            <article class="restaurant-section__cards">
+                <img class="restaurant-section__cards__images" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
+                <div class="restaurant-section__cards__text">
+                    <h3 class="restaurant-section__cards__text__title">Bastille</h3> 
+                    <p class="restaurant-section__cards__text__city">New York</p>
+                    <a class="restaurant-section__cards__text__icon-wrapper" href="#"><i class="fa-solid fa-heart restaurant-section__cards__text__icons"></i></a>
+                </div>
+            </article>
+    
+            <article class="restaurant-section__cards">
+                <img class="restaurant-section__cards__images" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
+                <div class="restaurant-section__cards__text">
+                    <h3 class="restaurant-section__cards__text__title">Le Gourmand</h3> 
+                    <p class="restaurant-section__cards__text__city">New York</p>
+                    <a class="restaurant-section__cards__text__icon-wrapper" href="#"><i class="fa-solid fa-heart restaurant-section__cards__text__icons"></i></a>
+                </div>
+            </article>
+        </section>
+    </div>
 
-        <article class="restaurant-section__cards">
-            <img class="restaurant-section__cards__images" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
-            <div class="restaurant-section__cards__new-sticker">
-                New 
-            </div>
-            <div class="restaurant-section__cards__text">
-                <h3 class="restaurant-section__cards__text__title">The Enchanted Plate</h3> 
-                <p class="restaurant-section__cards__text__city">New York</p>
-                <a class="restaurant-section__cards__text__icon-wrapper" href="#"><i class="fa-solid fa-heart restaurant-section__cards__text__icons"></i></a>
-            </div>
-        </article>
-
-        <article class="restaurant-section__cards">
-            <img class="restaurant-section__cards__images" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
-            <div class="restaurant-section__cards__text">
-                <h3 class="restaurant-section__cards__text__title">Bastille</h3> 
-                <p class="restaurant-section__cards__text__city">New York</p>
-                <a class="restaurant-section__cards__text__icon-wrapper" href="#"><i class="fa-solid fa-heart restaurant-section__cards__text__icons"></i></a>
-            </div>
-        </article>
-
-        <article class="restaurant-section__cards">
-            <img class="restaurant-section__cards__images" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
-            <div class="restaurant-section__cards__text">
-                <h3 class="restaurant-section__cards__text__title">Le Gourmand</h3> 
-                <p class="restaurant-section__cards__text__city">New York</p>
-                <a class="restaurant-section__cards__text__icon-wrapper" href="#"><i class="fa-solid fa-heart restaurant-section__cards__text__icons"></i></a>
-            </div>
-        </article>
-    </section>
+    
 
 
     <footer class="footer">

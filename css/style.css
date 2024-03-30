@@ -327,39 +327,135 @@ ul {
 }
 
 @media all and (min-width: 992px) {
-  .header--wrapper {
+  .header {
+    padding-top: 5px;
+    padding-bottom: 5px;
     display: flex;
   }
   .header__logo-wrapper {
-    flex-direction: 0 1 40%;
-    display: flex;
+    flex: 1 1 80%;
     justify-content: start;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
   }
   .header__logo-image {
-    width: 392px;
-    height: 60%;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    width: 250px;
+    height: 100%;
+    padding-left: 10px;
   }
   .header__location-card {
-    flex: 0 1 60%;
+    flex: 1 1 20%;
+  }
+  .header__location-card--desktop {
+    box-shadow: none;
+    background-color: #fff;
+  }
+  .nav {
+    width: 60%;
+    gap: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .nav__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .nav--desktop {
+    box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+  }
+  .nav__title {
+    font-size: 28px;
+  }
+  .nav__text {
+    font-size: 20px;
+  }
+  .nav__explore-button {
+    width: 40%;
+  }
+  .main-sections-wrapper {
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+  }
+  .how-section {
+    flex: 1 1 25%;
+    text-align: center;
+  }
+  .how-section__cards {
+    padding: 24px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  .how-section__cards__numbers {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    padding: 15px;
-    background-color: #EDEDED;
-    box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #9356DC;
+    color: #fff;
+    font-size: 12px;
   }
-  .header__location-card__icons {
-    color: #343434;
+  .how-section__cards__icons {
+    color: #8B8B8B;
+    font-size: 18px;
+    padding-left: 10px;
+  }
+  .how-section__cards__text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .how-section__cards:nth-child(4) {
+    background-color: #FBF2FF;
+  }
+  .how-section__cards:nth-child(4) .how-section__cards__icons {
+    color: #9356DC;
+  }
+  .restaurant-section {
+    flex: 1 1 75%;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .restaurant-section__title {
+    flex: 1 1 100%;
+    padding-bottom: 50px;
+    font-size: 28px;
+    text-align: center;
+  }
+  .restaurant-section__cards {
+    flex: 1 1 335px;
+    height: 280px;
+    margin: 0px;
+    position: relative;
+  }
+  .restaurant-section__cards__text {
+    padding: 10px;
+  }
+  .restaurant-section__cards__text__title {
+    padding-bottom: 5px;
+  }
+  .restaurant-section__cards__text__city {
     font-size: 18px;
   }
-  .header__location-card__text {
-    font-weight: 500;
+  .restaurant-section__cards__text__icon-wrapper {
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+  }
+  .restaurant-section__cards__text__icons {
+    font-size: 24px;
+    font-weight: 400;
+    background: linear-gradient(to top, #9356DC, #FF79DA);
   }
 }
 .header {
