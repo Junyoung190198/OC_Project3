@@ -300,32 +300,11 @@ ul {
     flex: 1 1 335px;
     height: 280px;
     margin: 0px;
-    position: relative;
   }
-  .restaurant-section__cards__text {
-    padding: 10px;
-  }
-  .restaurant-section__cards__text__title {
-    padding-bottom: 5px;
-  }
-  .restaurant-section__cards__text__city {
-    font-size: 18px;
-  }
-  .restaurant-section__cards__text__icon-wrapper {
-    position: absolute;
-    right: 20px;
-    bottom: 25px;
-  }
-  .restaurant-section__cards__text__icons {
-    font-size: 24px;
-    font-weight: 400;
-    background: linear-gradient(to top, #9356DC, #FF79DA);
+  .footer {
+    text-align: center;
   }
 }
-.footer {
-  text-align: center;
-}
-
 @media all and (min-width: 992px) {
   .header {
     padding-top: 5px;
@@ -343,6 +322,8 @@ ul {
   }
   .header__location-card {
     flex: 1 1 20%;
+    padding-right: 50px;
+    padding-left: 0px;
   }
   .header__location-card--desktop {
     box-shadow: none;
@@ -372,13 +353,19 @@ ul {
     width: 40%;
   }
   .main-sections-wrapper {
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     display: flex;
   }
   .how-section {
-    flex: 1 1 25%;
+    flex: 1 1 30%;
+  }
+  .how-section__title {
+    flex: 1 1 100%;
+    padding-bottom: 80px;
+    font-size: 28px;
     text-align: center;
   }
   .how-section__cards {
@@ -386,39 +373,9 @@ ul {
     margin-bottom: 50px;
     position: relative;
   }
-  .how-section__cards__numbers {
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #9356DC;
-    color: #fff;
-    font-size: 12px;
-  }
-  .how-section__cards__icons {
-    color: #8B8B8B;
-    font-size: 18px;
-    padding-left: 10px;
-  }
-  .how-section__cards__text {
-    font-size: 16px;
-    font-weight: 500;
-  }
-  .how-section__cards:nth-child(4) {
-    background-color: #FBF2FF;
-  }
-  .how-section__cards:nth-child(4) .how-section__cards__icons {
-    color: #9356DC;
-  }
   .restaurant-section {
-    flex: 1 1 75%;
-    text-align: center;
+    flex: 1 1 70%;
+    border-radius: 25px;
     padding-top: 40px;
     padding-bottom: 50px;
     margin-bottom: 0px;
@@ -433,29 +390,13 @@ ul {
     text-align: center;
   }
   .restaurant-section__cards {
-    flex: 1 1 335px;
-    height: 280px;
+    flex: 0 1 335px;
+    height: 250px;
     margin: 0px;
     position: relative;
   }
-  .restaurant-section__cards__text {
-    padding: 10px;
-  }
-  .restaurant-section__cards__text__title {
-    padding-bottom: 5px;
-  }
-  .restaurant-section__cards__text__city {
-    font-size: 18px;
-  }
-  .restaurant-section__cards__text__icon-wrapper {
-    position: absolute;
-    right: 20px;
-    bottom: 25px;
-  }
-  .restaurant-section__cards__text__icons {
-    font-size: 24px;
-    font-weight: 400;
-    background: linear-gradient(to top, #9356DC, #FF79DA);
+  .footer {
+    text-align: center;
   }
 }
 .header {

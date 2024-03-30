@@ -14,10 +14,11 @@
         }
         &__location-card{
             flex: 1 1 20%;
+            @include spacing(padding,px,50,right);
+            @include spacing(padding,px,0,left);
             &--desktop{
                 box-shadow: none;
                 @include color(background-color, white);
-
             }
         }
     }
@@ -53,15 +54,16 @@
     }
 
     .main-sections-wrapper{
-        @include spacing(padding, px, 10);
+        @include spacing(padding,px,10,left);
+        @include spacing(padding,px,10,right);
         @include spacing(padding, px, 30, top);
-        @include spacing(padding, px, 30, bottom);
+        @include spacing(padding, px, 20, bottom);
         display: flex;
-
     }
 
     .how-section{
-        flex: 1 1 25%;
+        flex: 1 1 30%;
+        
         
         &__title{
             @include title(desktop);
@@ -73,13 +75,11 @@
             @include spacing(margin, px, 50, bottom);
             position: relative;
         }  
-    
-     
     }
     
     .restaurant-section{
-        flex: 1 1 75%;
-        text-align: center;
+        flex: 1 1 70%;
+        border-radius: 25px;
         @include spacing(padding, px, 40, top);
         @include spacing(padding, px, 50, bottom);
         @include spacing(margin, px, 0, bottom);
@@ -87,47 +87,22 @@
         flex-wrap: wrap;
         @include spacing(gap, px, 20);
     
-        
-    
         &__title{
-            @include title(desktop);
+            @include title(tablet);
             text-align: center;
-         }
+        }
      
-         &__cards{
-             flex: 1 1 335px;
-             height: 280px;
-             @include spacing(margin, px, 0);
-             position: relative;
-     
-             &__text{
-                 @include spacing(padding, px, 10);
-                 
-                 &__title{
-                     @include spacing(padding, px, 5, bottom);
-                 }
-     
-                 &__city{
-                     @include font(font-size, normal-plus);
-                 }
-     
-                 &__icon-wrapper{
-                     position: absolute;
-                     right: 20px;
-                     bottom: 25px;
-                 }
-     
-                 &__icons{
-                     @include font(font-size, very-big);
-                     @include font(font-weight, regular);
-                     background: linear-gradient(to top, $color-primary, $color-secondary);
-                 
-                     &:hover{ // Do when know ~~
-                         @include heartIcons-linear();
-                     }  
-                 }
-             }
-         }
+        &__cards{
+            flex: 0 1 335px;
+            height: 250px;
+            @include spacing(margin, px, 0);
+            position: relative;
+        }
     }
 
+    .footer{
+        text-align: center;
+    }
 }
+
+    
