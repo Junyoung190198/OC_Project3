@@ -120,7 +120,12 @@
 }
 
 @mixin heartIcons-linear(){
-    
+    background: linear-gradient(to top, $color-primary, $color-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    @include font(font-weight, bold);
 }
 
 

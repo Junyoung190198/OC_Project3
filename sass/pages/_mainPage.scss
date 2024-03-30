@@ -151,6 +151,16 @@
         @include box-shadow();
         position: relative;
 
+        &:hover{
+            @include box-shadow(out, heavy);
+        }
+
+        &--link{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
         &__images{
             @include image-cards();
         }
@@ -188,11 +198,7 @@
             &__icons{
                 @include font(font-size, very-big);
                 @include font(font-weight, regular);
-                background: linear-gradient(to top, $color-primary, $color-secondary);
-                
-
-                
-            
+    
                 &:hover{
                     @include heartIcons-linear();
                 }  

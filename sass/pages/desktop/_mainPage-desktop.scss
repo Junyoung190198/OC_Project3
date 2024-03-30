@@ -55,7 +55,7 @@
 
     .main-sections-wrapper{
         @include spacing(padding,px,10,left);
-        @include spacing(padding,px,10,right);
+        @include spacing(padding,px,20,right);
         @include spacing(padding, px, 30, top);
         @include spacing(padding, px, 20, bottom);
         display: flex;
