@@ -204,8 +204,15 @@ ul {
 .restaurant-section__cards__text__icons {
   font-size: 24px;
   font-weight: 400;
-  background: linear-gradient(to top, #9356DC, #FF79DA);
 }
+.restaurant-section__cards__text__icons:hover {
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
 .footer {
   width: 100%;
   background-color: #333333;

@@ -188,13 +188,18 @@
             &__icons{
                 @include font(font-size, very-big);
                 @include font(font-weight, regular);
-                background: linear-gradient(to top, $color-primary, $color-secondary);
+                
                 
 
                 
             
                 &:hover{
-                    @include heartIcons-linear();
+                    // @include heartIcons-linear();
+                    background: linear-gradient(to top, $color-primary, $color-secondary);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    font-weight: bold;
                 }  
             }
         }
