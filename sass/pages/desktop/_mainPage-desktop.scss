@@ -60,56 +60,21 @@
 
     }
 
-
-
-
     .how-section{
         flex: 1 1 25%;
-        text-align: center;
         
+        &__title{
+            @include title(desktop);
+            text-align: center;
+        }  
          
         &__cards{
             @include spacing(padding, px, 24);
             @include spacing(margin, px, 50, bottom);
-            
             position: relative;
-            
-            &__numbers{
-                height: 25px;
-                width: 25px;
-                border-radius: 50%;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                left: -12px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                @include color(background-color, violet);
-                @include color(color, white);
-                @include font(font-size, very-small);
-            }
-            
-            &__icons{ 
-                @include color(color, light-grey-icon);
-                @include font(font-size, normal-plus);
-                @include spacing(padding, px, 10, left);
-            }
-    
-            
-    
-            &__text{
-                @include font(font-size, normal);
-                @include font(font-weight, medium);
-            }
         }  
     
-        &__cards:nth-child(4){
-            @include color(background-color, light-pink);
-            .how-section__cards__icons{
-                @include color(color, violet);
-            }
-        }
+     
     }
     
     .restaurant-section{
@@ -125,7 +90,7 @@
         
     
         &__title{
-            @include title-section-tablet();
+            @include title(desktop);
             text-align: center;
          }
      

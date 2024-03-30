@@ -89,14 +89,26 @@
 }
 
 @mixin title-section(){
-    flex: 1 1 100%;
-    @include spacing(padding, px, 30, bottom);
+  
 }
 
 @mixin title-section-tablet(){
-    flex: 1 1 100%;
-    @include spacing(padding, px, 50, bottom);
-    @include font(font-size,title-big);    
+       
+}
+
+@mixin title($title: normal){
+    @if($title == tablet){
+        flex: 1 1 100%;
+        @include spacing(padding, px, 50, bottom);
+        @include font(font-size,title-big);
+    }@else if($title == desktop){
+        flex: 1 1 100%;
+        @include spacing(padding, px, 80, bottom);
+        @include font(font-size,title-big);
+    }@else{
+        flex: 1 1 100%;
+        @include spacing(padding, px, 30, bottom);
+    }
 }
 
 @mixin image-cards(){

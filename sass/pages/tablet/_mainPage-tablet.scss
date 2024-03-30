@@ -46,7 +46,7 @@
         align-items: center;
         
         &__title{
-            @include title-section-tablet();
+            @include title(tablet);
             text-align: center;
         }    
         &__cards{
@@ -78,7 +78,7 @@
         @include spacing(gap, px, 20);
         
         &__title{
-           @include title-section-tablet();
+           @include title(tablet);
            text-align: center;
         }
     

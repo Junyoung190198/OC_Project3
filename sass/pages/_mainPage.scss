@@ -76,7 +76,7 @@
     @include color(background-color, white);
     
     &__title{
-        @include title-section();
+        @include title();
     }    
     &__cards{
         @include spacing(padding, px, 24);
@@ -139,7 +139,7 @@
     
 
     &__title{
-       @include title-section();
+       @include title();
     }
 
     &__cards{
