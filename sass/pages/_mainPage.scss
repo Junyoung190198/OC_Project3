@@ -60,7 +60,6 @@
         background: linear-gradient(to top, $color-primary, $color-secondary);
         
         &__text{
-            @include font(font-size, regular);
             @include font(font-weight, regular);
         }
         &:hover{
@@ -200,13 +199,7 @@
                 @include font(font-weight, regular);
                 
                 &:hover{
-                    // @include heartIcons-linear();
-                    background: linear-gradient(to top, $color-primary, $color-secondary);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -moz-background-clip: text;
-                    color: transparent;
-                    font-weight: bold;
+                    @include heartIcons-linear();
                 }  
             }
         }

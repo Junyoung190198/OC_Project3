@@ -6,6 +6,9 @@
         position: absolute;
         left: 30px;
         top: 35%;
+        &:hover{
+            opacity: 0.5;
+        }
     }
 }
 
@@ -40,18 +43,29 @@
             right: 40px;
             @include font(font-size, very-big);
             @include font(font-weight, regular); 
+
+            &:hover{
+                @include heartIcons-linear();
+            }
         }
 
-        &__under-title{
-            @include spacing(padding, px, 5, bottom);
-            @include spacing(padding, px, 10, top);
+        &--menu{
+            @include spacing(padding, px, 30, bottom);
         }
 
-        &__green-line{
-            width: 35px;
-            border: 2px solid $color-tertiary;
-            @include spacing(margin, px, 15, bottom);
+        &__under-title-wrapper{
+            @include spacing(padding, px, 15, bottom);
+
+            &__under-title{
+                @include spacing(padding, px, 5, bottom);
+            }
+    
+            &__green-line{
+                width: 35px;
+                border: 2px solid $color-tertiary;
+            }
         }
+        
 
         &__cards{
             position: relative;
@@ -77,25 +91,26 @@
         }
 
         &__order-button{
-            @include spacing(padding,px,40, top);
-            @include spacing(padding,px,30, bottom);
+            @include spacing(padding,px,10, top);
+            @include spacing(padding,px,40, bottom);
             display: flex;
             justify-content: center;
+
             &__nav{
-            width: 60%;
-            @include spacing(padding, px, 15);
-            @include button(pink,white, 25px); 
-            @include box-shadow(out, heavy);
-            background: linear-gradient(to top, $color-primary, $color-secondary);
-            text-align: center;
+                width: 60%;
+                @include spacing(padding, px, 15);
+                @include button(pink,white, 25px); 
+                @include box-shadow(out, heavy);
+                background: linear-gradient(to top, $color-primary, $color-secondary);
+                text-align: center;
             
-            &__text{
-                @include font(font-size, regular);
-                @include font(font-weight, medium);
-            }
-            &:hover{
-                opacity: 0.5;
-            }
+                &__text{
+                    @include font(font-weight, regular);
+                }
+                
+                &:hover{
+                    opacity: 0.5;
+                }
             }
         }
     }

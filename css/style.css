@@ -219,7 +219,7 @@ ul {
   -webkit-background-clip: text;
   -moz-background-clip: text;
   color: transparent;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .footer {
@@ -424,6 +424,9 @@ ul {
   left: 30px;
   top: 35%;
 }
+.header__icons:hover {
+  opacity: 0.5;
+}
 
 .restaurant {
   width: 100%;
@@ -455,14 +458,26 @@ ul {
   font-size: 24px;
   font-weight: 400;
 }
-.restaurant__dishes__under-title {
-  padding-bottom: 5px;
-  padding-top: 10px;
+.restaurant__dishes__icons:hover {
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  font-weight: 700;
 }
-.restaurant__dishes__green-line {
+.restaurant__dishes--menu {
+  padding-bottom: 30px;
+}
+.restaurant__dishes__under-title-wrapper {
+  padding-bottom: 15px;
+}
+.restaurant__dishes__under-title-wrapper__under-title {
+  padding-bottom: 5px;
+}
+.restaurant__dishes__under-title-wrapper__green-line {
   width: 35px;
   border: 2px solid #99E2D0;
-  margin-bottom: 15px;
 }
 .restaurant__dishes__cards {
   position: relative;
@@ -484,8 +499,8 @@ ul {
   bottom: 10px;
 }
 .restaurant__dishes__order-button {
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 40px;
   display: flex;
   justify-content: center;
 }
@@ -500,10 +515,65 @@ ul {
   text-align: center;
 }
 .restaurant__dishes__order-button__nav__text {
-  font-weight: 500;
+  font-weight: 400;
 }
 .restaurant__dishes__order-button__nav:hover {
   opacity: 0.5;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .restaurant__image {
+    height: 400px;
+  }
+  .restaurant__dishes {
+    padding: 40px;
+    padding-bottom: 40px;
+    padding-top: 60px;
+  }
+  .restaurant__dishes__title {
+    font-size: 28px;
+    padding-bottom: 80px;
+  }
+  .restaurant__dishes__icons {
+    right: 50px;
+    top: 60px;
+    font-size: 28px;
+  }
+  .restaurant__dishes--menu {
+    padding-bottom: 70px;
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+  .restaurant__dishes__under-title-wrapper {
+    padding-bottom: 30px;
+    padding-left: 42%;
+  }
+  .restaurant__dishes__under-title-wrapper__under-title {
+    font-size: 18px;
+  }
+  .restaurant__dishes__cards__title {
+    font-size: 20px;
+  }
+  .restaurant__dishes__cards__text {
+    font-size: 16px;
+  }
+  .restaurant__dishes__order-button {
+    padding-bottom: 70px;
+  }
+  .restaurant__dishes__order-button__nav {
+    width: 30%;
+  }
+  .restaurant__dishes__order-button__nav__text {
+    font-size: 18px;
+  }
+  .restaurant__dishes__order-button__nav:hover {
+    opacity: 0.5;
+  }
+}
+@media all and (min-width: 992px) {
+  .header__icons {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

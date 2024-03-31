@@ -88,14 +88,6 @@
     }
 }
 
-@mixin title-section(){
-  
-}
-
-@mixin title-section-tablet(){
-       
-}
-
 @mixin title($title: normal){
     @if($title == tablet){
         flex: 1 1 100%;

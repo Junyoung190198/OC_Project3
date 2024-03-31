@@ -1,3 +1,80 @@
 @media (min-width: 768px) and (max-width: 992px){
+
+    .restaurant{
     
+        &__image{
+            height: 400px;
+        }
+    
+        &__dishes{
+            @include spacing(padding, px, 40);
+            @include spacing(padding, px, 40, bottom);
+            @include spacing(padding, px, 60, top);
+            @include spacing(margin,px, 50Minus,top);
+    
+            &__title{
+                @include font(font-size,title-big);
+                @include spacing(padding, px, 80, bottom);
+            }
+    
+            &__icons{
+                right: 50px;
+                top: 60px;
+                @include font(font-size, title-big);
+            }
+
+            &--menu{
+                @include spacing(padding, px, 70, bottom);
+                @include spacing(padding, percent, 15, right);
+                @include spacing(padding, percent, 15, left);
+            }
+
+            &__under-title-wrapper{
+                @include spacing(padding, px, 30, bottom);
+                @include spacing(padding, percent, 42 ,left);
+     
+                &__under-title{
+                  @include font(font-size, normal-plus);
+                }
+            }
+
+            &__cards{
+
+                &__title{
+                    @include font(font-size, big);
+                }
+    
+                &__text{
+                    @include font(font-size, normal);
+                }
+            }
+    
+            &__order-button{
+                
+                @include spacing(padding,px,70, bottom);
+
+                &__nav{
+                    width: 30%;
+
+                    &__text{
+                        @include font(font-size, normal-plus);
+                    }
+                    &:hover{
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
