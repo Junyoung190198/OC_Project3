@@ -1,7 +1,6 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$color-fourth: linear-gradient(to top, $color-primary, $color-secondary);
 $color-background-primary: #fff;
 $color-background-secondary: #F7F7F7;
 $color-background-tertiary: #EDEDED;
@@ -43,7 +42,6 @@ $color-palette:(
     violet: $color-primary,
     pink: $color-secondary,
     green: $color-tertiary,
-    violet-pink: $color-fourth,
 
     white: $color-background-primary,
     light-grey: $color-background-secondary,
@@ -72,6 +70,7 @@ $spacing-palette:(
         70: 70px,
         80: 80px,
         260: 260px,
+        0Minus: 0px,
         10Minus: -10px,
         15Minus: -15px,
         20Minus: -20px,

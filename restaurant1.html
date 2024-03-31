@@ -21,20 +21,26 @@ family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="s
 
 <body>
     <header class="header">
-        <a href="index.html" class="header__logo-wrapper">
-        <img class="header__logo-image" src="images/logo/ohmyfood.png" alt="Logo"> <!-- Negative margin~~ -->
+        <div class="header__logo-wrapper">
+            <a href="index.html">
+                <img class="header__logo-image" src="images/logo/ohmyfood.png" alt="Logo"> 
+            </a>
         </div>
-        <a class="header__icons" href="index.html"><i class="fa-solid fa-arrow-left"></i></a> <!-- See for the redirecting of specific places -->
+
+        <a class="header__icons" href="index.html"><i class="fa-solid fa-arrow-left"></i></a> <!-- See for the redirecting of specific places, ex redirect directly to the restaurant section -->
     </header>
 
     <div class="restaurant">
-        <img class="restaurant__image" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+        <div class="restaurant__wrapper">
+            <img class="restaurant__wrapper__image" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+        </div>
+        
 
 
         <section class="restaurant__dishes">
             <h2 class="restaurant__dishes__title">The Full Palette</h2>
-            <a href="#">
-                <i class="fa-solid fa-heart restaurant__dishes__icons"></i>
+            <a class="restaurant__dishes__icons-wrapper" href="#">
+                <i class="fa-solid fa-heart restaurant__dishes__icons-wrapper__icons"></i>
             </a>
 
 

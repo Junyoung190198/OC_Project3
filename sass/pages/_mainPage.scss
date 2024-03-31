@@ -111,8 +111,6 @@
             @include spacing(padding, px, 10, left);
         }
 
-        
-
         &__text{
             @include font(font-size, normal);
             @include font(font-weight, medium);
@@ -134,8 +132,6 @@
     @include spacing(padding, px, 50, top);
     @include spacing(padding, px, 40, bottom);
     @include spacing(gap, px, 10);
-
-    
 
     &__title{
        @include title();
