@@ -55,7 +55,7 @@
 
     .main-sections-wrapper{
         @include spacing(padding,px,10,left);
-        @include spacing(padding,px,10,right);
+        @include spacing(padding,px,20,right);
         @include spacing(padding, px, 30, top);
         @include spacing(padding, px, 20, bottom);
         display: flex;
@@ -93,7 +93,7 @@
         }
      
         &__cards{
-            flex: 0 1 305px;
+            flex: 0 1 300px;
             height: 250px;
             @include spacing(margin, px, 0);
             position: relative;

@@ -168,6 +168,14 @@ ul {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   position: relative;
 }
+.restaurant-section__cards:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+.restaurant-section__cards--link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
 .restaurant-section__cards__images {
   width: 100%;
   height: 70%;
@@ -209,6 +217,7 @@ ul {
   background: linear-gradient(to top, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
   color: transparent;
   font-weight: bold;
 }
@@ -361,7 +370,7 @@ ul {
   }
   .main-sections-wrapper {
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 20px;
     padding-top: 30px;
     padding-bottom: 20px;
     display: flex;
@@ -397,7 +406,7 @@ ul {
     text-align: center;
   }
   .restaurant-section__cards {
-    flex: 0 1 305px;
+    flex: 0 1 300px;
     height: 250px;
     margin: 0px;
     position: relative;
