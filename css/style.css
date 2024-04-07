@@ -492,17 +492,25 @@ ul {
   border: 2px solid #99E2D0;
 }
 .restaurant__dishes__cards {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   border-radius: 15px;
   background-color: #fff;
   margin-bottom: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  overflow: hidden;
 }
 .restaurant__dishes__cards-accent {
+  transform: translateX(60px);
+  display: none;
+  transition: all 500ms;
   background-color: #99E2D0;
-  border-radius: 15px;
-  animation: example 330ms forwards;
+}
+.restaurant__dishes__cards-accent__icons {
+  color: white;
+}
+.restaurant__dishes__cards div {
+  padding: 10px;
 }
 .restaurant__dishes__cards__title {
   padding-bottom: 10px;
@@ -511,9 +519,16 @@ ul {
   font-size: 14px;
 }
 .restaurant__dishes__cards__price {
-  position: absolute;
-  right: 20px;
-  bottom: 10px;
+  margin-left: auto;
+  padding: 10px;
+  align-self: flex-end;
+}
+.restaurant__dishes__cards:hover .restaurant__dishes__cards-accent {
+  width: 60px;
+  transform: translateX(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .restaurant__dishes__order-button {
   padding-top: 10px;

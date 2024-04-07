@@ -75,34 +75,29 @@
         }
         
         &__cards{
-            position: relative;
+            display: flex;
+            justify-content: space-between;
             border-radius: 15px;
             @include color(background-color, white);
             @include spacing(margin, px, 15, bottom);
             @include box-shadow();
-            @include spacing(padding, px, 10);
-
+            overflow: hidden;
+            
             &-accent{
-               
+                transform: translateX(60px);
+                display: none;
+                transition: all 500ms;
                 
                 @include color(background-color, green);
-                border-radius: 15px;
-                animation: example 330ms forwards;
+                //animation: example 330ms forwards;
               
                 &__icons{
-
+                    color: white;
                 }
             }
 
-            &-link{
-
-                &:hover + .restaurant__dishes__cards-accent{
-                    
-    
-                    & > .restaurant__dishes__cards__accent__icons{
-    
-                    }
-                }
+            div {
+                @include spacing(padding, px, 10);
             }
 
             &__title{
@@ -114,12 +109,18 @@
             }
 
             &__price{
-                position: absolute;
-                right: 20px;
-                bottom: 10px;
+                margin-left: auto;
+                @include spacing(padding, px, 10);
+                align-self: flex-end; // text-ellipsis
             }
 
-    
+            &:hover .restaurant__dishes__cards-accent {
+                width: 60px;
+                transform: translateX(0);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
         
         }
