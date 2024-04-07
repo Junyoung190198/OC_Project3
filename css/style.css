@@ -1,3 +1,11 @@
+@keyframes example {
+  from {
+    min-width: 0;
+  }
+  to {
+    min-width: 100vw;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -490,6 +498,11 @@ ul {
   margin-bottom: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   padding: 10px;
+}
+.restaurant__dishes__cards-accent {
+  background-color: #99E2D0;
+  border-radius: 15px;
+  animation: example 330ms forwards;
 }
 .restaurant__dishes__cards__title {
   padding-bottom: 10px;

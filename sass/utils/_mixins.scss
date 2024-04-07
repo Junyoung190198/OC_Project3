@@ -120,4 +120,14 @@
     @include font(font-weight, bold);
 }
 
+@mixin link-wrap{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes example {
+    from {min-width: 0;}
+    to {min-width: 100vw}
+  }
 
