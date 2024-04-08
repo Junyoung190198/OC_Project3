@@ -82,47 +82,47 @@
             @include spacing(margin, px, 15, bottom);
             @include box-shadow();
             overflow: hidden;
+            cursor: pointer;
             
-            &-accent{
-                transform: translateX(60px);
-                display: none;
-                transition: all 500ms;
-                
-                @include color(background-color, green);
-                //animation: example 330ms forwards;
-              
-                &__icons{
-                    color: white;
-                }
-            }
-
-            div {
+            &__text-wrapper {
                 @include spacing(padding, px, 10);
+                @include font(font-size, small);
+                
+                text-overflow: ellipsis; // display flex doesn't work with this
+                overflow: hidden;        // Also wrapping in a p doesn't work
+                white-space: nowrap;
             }
 
             &__title{
+               @include font(font-size, big);
                 @include spacing(padding, px, 10, bottom);
-            }
-
-            &__text{
-                @include font(font-size, small);
             }
 
             &__price{
                 margin-left: auto;
                 @include spacing(padding, px, 10);
-                align-self: flex-end; // text-ellipsis
+                align-self: flex-end; 
+                
             }
 
-            &:hover .restaurant__dishes__cards-accent {
-                width: 60px;
-                transform: translateX(0);
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            &-accent{
+                @include color(background-color, green);
+                width: 0%;
+                transition: all 400ms; // Tried scale() and others, best thing is modifying width even if it's not recomended
+                @include display-flex-center();
+               
+                &__icons{
+                    color: white;
+                }
             }
 
-        
+            &:hover .restaurant__dishes__cards-accent{
+                width: 15%;
+
+                &__icons{
+                    
+                }
+            }
         }
 
         &__order-button{
