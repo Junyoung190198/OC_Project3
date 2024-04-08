@@ -85,6 +85,7 @@
             cursor: pointer;
             
             &__text-wrapper {
+                width: 300px;
                 @include spacing(padding, px, 10);
                 @include font(font-size, small);
                 
@@ -94,33 +95,39 @@
             }
 
             &__title{
-               @include font(font-size, big);
-                @include spacing(padding, px, 10, bottom);
+                white-space: wrap;
+                @include font(font-size, normal-plus);
+                @include spacing(padding, px, 5, bottom);
             }
 
             &__price{
+                width: 60px;
                 margin-left: auto;
                 @include spacing(padding, px, 10);
+                @include spacing(padding, px, 20, right);
                 align-self: flex-end; 
-                
             }
 
             &-accent{
+                
                 @include color(background-color, green);
                 width: 0%;
-                transition: all 400ms; // Tried scale() and others, best thing is modifying width even if it's not recomended
+                transition: all 600ms ease-in-out; // Tried scale() and others, best thing is modifying width even if it's not recomended
                 @include display-flex-center();
                
                 &__icons{
                     color: white;
+                    @include font(font-size, very-big);
+                    transform: rotate(0deg);
+                    transition: all 600ms ease-in-out;
                 }
             }
 
             &:hover .restaurant__dishes__cards-accent{
-                width: 15%;
+                width: 25%;
 
                 &__icons{
-                    
+                    transform: rotate(360deg);
                 }
             }
         }

@@ -494,6 +494,7 @@ ul {
   cursor: pointer;
 }
 .restaurant__dishes__cards__text-wrapper {
+  width: 300px;
   padding: 10px;
   font-size: 14px;
   text-overflow: ellipsis;
@@ -501,27 +502,36 @@ ul {
   white-space: nowrap;
 }
 .restaurant__dishes__cards__title {
-  font-size: 20px;
-  padding-bottom: 10px;
+  white-space: wrap;
+  font-size: 18px;
+  padding-bottom: 5px;
 }
 .restaurant__dishes__cards__price {
+  width: 60px;
   margin-left: auto;
   padding: 10px;
+  padding-right: 20px;
   align-self: flex-end;
 }
 .restaurant__dishes__cards-accent {
   background-color: #99E2D0;
   width: 0%;
-  transition: all 400ms;
+  transition: all 600ms ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .restaurant__dishes__cards-accent__icons {
   color: white;
+  font-size: 24px;
+  transform: rotate(0deg);
+  transition: all 600ms ease-in-out;
 }
 .restaurant__dishes__cards:hover .restaurant__dishes__cards-accent {
-  width: 15%;
+  width: 25%;
+}
+.restaurant__dishes__cards:hover .restaurant__dishes__cards-accent__icons {
+  transform: rotate(360deg);
 }
 .restaurant__dishes__order-button {
   padding-top: 10px;
