@@ -222,6 +222,10 @@
             @include font(font-size, very-small);
             @include spacing(padding, px, 5, right);
         }
+
+        &:hover{
+            opacity: 0.5;
+        }
     }
 }
 

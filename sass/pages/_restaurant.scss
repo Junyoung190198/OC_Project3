@@ -124,12 +124,23 @@
             }
 
             &:hover .restaurant__dishes__cards-accent{
-                width: 25%;
+                width: 100px;
 
                 &__icons{
                     transform: rotate(360deg);
                 }
             }
+
+            animation: card-delay-keyframes 400ms linear backwards; // 1 through 10 or more? How to automate it? 
+
+            @for $i from 1 through $num-cards-resto2{
+                &--#{$i}{
+                    animation-delay: 100ms * $i;
+                }
+            }
+
+         
+         
         }
 
         &__order-button{
@@ -139,7 +150,7 @@
             justify-content: center;
 
             &__nav{
-                width: 60%;
+                width: 200px;
                 @include spacing(padding, px, 15);
                 @include button(pink,white, 25px); 
                 @include box-shadow(out, heavy);

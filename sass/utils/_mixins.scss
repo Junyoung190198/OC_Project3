@@ -132,6 +132,26 @@
     align-items: center;
 }
 
+@keyframes card-delay-keyframes{
+
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@mixin cards-animation-delay($cards-num){
+
+ 
+}
+
+@mixin cards-animation(){
+    
+}
 
 
 

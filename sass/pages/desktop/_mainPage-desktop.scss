@@ -95,7 +95,8 @@
         }
      
         &__cards{
-            flex: 0 1 300px;
+            flex: 1 1 300px;
+            max-width: 400px;
             height: 250px;
             @include spacing(margin, px, 0);
             position: relative;
