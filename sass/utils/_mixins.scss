@@ -120,6 +120,15 @@
     @include font(font-weight, bold);
 }
 
+@mixin heartIcons-linear-base(){
+    background: linear-gradient(to top, $color-background-primary, $color-background-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    @include font(font-weight, bold);
+}
+
 @mixin link-wrap(){
     display: inline-block;
     width: 100%;
@@ -195,6 +204,15 @@
 @keyframes cancel-hidden-animation{
     to{
         visibility: visible;
+    }
+}
+
+@keyframes fill-heart{
+    from{
+        @include heartIcons-linear-base();
+    }
+    to{
+        @include heartIcons-linear();
     }
 }
 

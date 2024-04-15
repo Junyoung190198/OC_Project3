@@ -31,6 +31,24 @@
     visibility: visible;
   }
 }
+@keyframes fill-heart {
+  from {
+    background: linear-gradient(to top, #fff, #fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
+  to {
+    background: linear-gradient(to top, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -281,12 +299,7 @@ ul {
   font-weight: 400;
 }
 .restaurant-section__cards__text__icons:hover {
-  background: linear-gradient(to top, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  color: transparent;
-  font-weight: 700;
+  animation: fill-heart 3s ease forwards;
 }
 
 .footer {

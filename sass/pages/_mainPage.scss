@@ -199,7 +199,7 @@
                 @include font(font-weight, regular);
                 
                 &:hover{
-                    @include heartIcons-linear();
+                    animation: fill-heart 3s ease forwards;
                 }  
             }
         }
