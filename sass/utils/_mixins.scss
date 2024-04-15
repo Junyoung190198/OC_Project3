@@ -132,6 +132,31 @@
     align-items: center;
 }
 
+@mixin loader-wrapper(){
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    @include display-flex-center();
+}
+
+@mixin display-none(){
+    visibility: hidden;
+    animation: display-none-while-loading 1ms 3s forwards;
+}
+
+@mixin loader(){
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid transparent;
+    border-top-color: $color-primary;
+    border-radius: 50%;
+    animation: loader-animation 800ms ease infinite;
+}
+
+
 @keyframes card-delay-keyframes{
 
     from{
@@ -144,14 +169,37 @@
     }
 }
 
-@mixin cards-animation-delay($cards-num){
-
- 
+@keyframes loader-animation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
 
-@mixin cards-animation(){
-    
+@keyframes display-none-while-loading{
+   
+    to{
+        visibility: visible;
+    }
 }
+
+@keyframes stop-display-loader{
+   
+    to{
+        visibility: hidden;
+    }
+}
+
+@keyframes cancel-hidden-animation{
+    to{
+        visibility: visible;
+    }
+}
+
+
+
 
 
 

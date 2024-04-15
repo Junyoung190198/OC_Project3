@@ -8,6 +8,29 @@
     transform: translateY(0);
   }
 }
+@keyframes loader-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes display-none-while-loading {
+  to {
+    visibility: visible;
+  }
+}
+@keyframes stop-display-loader {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes cancel-hidden-animation {
+  to {
+    visibility: visible;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +39,31 @@
 
 body {
   box-sizing: border-box;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+}
+.loader--active {
+  animation: stop-display-loader 3s forwards;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid transparent;
+  border-top-color: #9356DC;
+  border-radius: 50%;
+  animation: loader-animation 800ms ease infinite;
 }
 
 body, p {
@@ -38,6 +86,8 @@ ul {
 }
 
 .header {
+  visibility: hidden;
+  animation: display-none-while-loading 1ms 3s forwards;
   width: 100%;
   background-color: #fff;
 }
@@ -73,6 +123,8 @@ ul {
 }
 
 .nav {
+  visibility: hidden;
+  animation: display-none-while-loading 1ms 3s forwards;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,10 +153,13 @@ ul {
   font-weight: 400;
 }
 .nav__explore-button:hover {
-  opacity: 0.5;
+  background: #ff7cdb;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
 
 .how-section {
+  visibility: hidden;
+  animation: display-none-while-loading 1ms 3s forwards;
   padding: 20px;
   padding-bottom: 40px;
   padding-top: 50px;
@@ -158,6 +213,8 @@ ul {
 }
 
 .restaurant-section {
+  visibility: hidden;
+  animation: display-none-while-loading 1ms 3s forwards;
   width: 100%;
   background-color: #F7F7F7;
   padding: 20px;
@@ -233,6 +290,8 @@ ul {
 }
 
 .footer {
+  visibility: hidden;
+  animation: display-none-while-loading 1ms 3s forwards;
   width: 100%;
   background-color: #333333;
   color: #fff;
@@ -422,7 +481,7 @@ ul {
   }
   .restaurant-section__cards {
     flex: 1 1 300px;
-    max-width: 400px;
+    max-width: 330px;
     height: 250px;
     margin: 0px;
     position: relative;
@@ -433,6 +492,9 @@ ul {
 }
 .header {
   position: relative;
+}
+.header--active {
+  visibility: visible;
 }
 .header__icons {
   font-size: 20px;
@@ -517,7 +579,7 @@ ul {
   white-space: nowrap;
 }
 .restaurant__dishes__cards__title {
-  white-space: wrap;
+  white-space: normal;
   font-size: 18px;
   padding-bottom: 5px;
 }
@@ -598,7 +660,12 @@ ul {
   font-weight: 400;
 }
 .restaurant__dishes__order-button__nav:hover {
-  opacity: 0.5;
+  background: #ff7cdb;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+
+.footer--active {
+  visibility: visible;
 }
 
 @media (min-width: 768px) and (max-width: 992px) {

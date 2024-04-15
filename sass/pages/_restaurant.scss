@@ -1,5 +1,10 @@
 .header{
+    
     position: relative;
+
+    &--active{
+        visibility: visible;
+    }
 
     &__icons{
         @include font(font-size, big);
@@ -13,6 +18,7 @@
 }
 
 .restaurant{
+    
     width: 100%;
 
     &__wrapper{
@@ -95,7 +101,7 @@
             }
 
             &__title{
-                white-space: wrap;
+                white-space: normal;
                 @include font(font-size, normal-plus);
                 @include spacing(padding, px, 5, bottom);
             }
@@ -162,10 +168,17 @@
                 }
                 
                 &:hover{
-                    opacity: 0.5;
+                    background: lighten($color: $color-secondary, $amount: 0.5);
+                    @include box-shadow(out, super-heavy);
                 }
             }
         }
+    }
+}
+
+.footer{
+    &--active{
+        visibility: visible;
     }
 }
 
