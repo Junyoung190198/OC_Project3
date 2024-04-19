@@ -64,9 +64,7 @@
                     &__text{
                         @include font(font-size, normal-plus);
                     }
-                    &:hover{
-                        opacity: 0.5;
-                    }
+                   
                 }
             }
         }

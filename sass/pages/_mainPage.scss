@@ -65,9 +65,7 @@
             @include font(font-weight, regular);
         }
         &:hover{
-            background: lighten($color: $color-secondary, $amount: 0.5);
-            @include box-shadow(out, super-heavy);
-            
+            @include lighten-button();
         }
     }
 }
@@ -192,15 +190,17 @@
                 position: absolute;
                 right: 20px;
                 bottom: 25px;
+  
             }
 
             &__icons{
                 @include font(font-size, very-big);
                 @include font(font-weight, regular);
-                
+
                 &:hover{
-                    animation: fill-heart 3s ease forwards;
-                }  
+                    animation: fill-heart 400ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+                }
+                
             }
         }
     }

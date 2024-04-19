@@ -32,16 +32,80 @@
   }
 }
 @keyframes fill-heart {
-  from {
-    background: linear-gradient(to top, #fff, #fff);
+  10% {
+    background: linear-gradient(#fff 90%, #FF79DA 10%);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     color: transparent;
     font-weight: 700;
   }
-  to {
-    background: linear-gradient(to top, #9356DC, #FF79DA);
+  20% {
+    background: linear-gradient(#fff 80%, #FF79DA 20%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
+  30% {
+    background: linear-gradient(#fff 70%, #FF79DA 30%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
+  40% {
+    background: linear-gradient(#fff 60%, #FF79DA 40%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
+  50% {
+    background: linear-gradient(#fff 50%, #FF79DA 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
+  60% {
+    background: linear-gradient(#fff 40%, #FF79DA 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
+  70% {
+    background: linear-gradient(#fff 30%, #FF79DA 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
+  80% {
+    background: linear-gradient(#fff 20%, #FF79DA 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
+  90% {
+    background: linear-gradient(#fff 10%, #FF79DA 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
+  100% {
+    background: linear-gradient(#9356DC, #FF79DA);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -299,7 +363,7 @@ ul {
   font-weight: 400;
 }
 .restaurant-section__cards__text__icons:hover {
-  animation: fill-heart 3s ease forwards;
+  animation: fill-heart 400ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 
 .footer {
@@ -552,12 +616,7 @@ ul {
   font-weight: 400;
 }
 .restaurant__dishes__icons-wrapper__icons:hover {
-  background: linear-gradient(to top, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  color: transparent;
-  font-weight: 700;
+  animation: fill-heart 400ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 .restaurant__dishes--menu {
   padding-bottom: 30px;
@@ -728,9 +787,6 @@ ul {
   }
   .restaurant__dishes__order-button__nav__text {
     font-size: 18px;
-  }
-  .restaurant__dishes__order-button__nav:hover {
-    opacity: 0.5;
   }
 }
 @media all and (min-width: 992px) {

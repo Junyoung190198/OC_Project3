@@ -57,7 +57,7 @@
                 @include font(font-weight, regular); 
     
                 &:hover{
-                    @include heartIcons-linear();
+                    animation: fill-heart 400ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
                 }
             }
         
@@ -165,8 +165,7 @@
                 }
                 
                 &:hover{
-                    background: lighten($color: $color-secondary, $amount: 0.5);
-                    @include box-shadow(out, super-heavy);
+                    @include lighten-button();
                 }
             }
         }
