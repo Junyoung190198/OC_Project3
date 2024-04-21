@@ -1,1 +1,1 @@
-https://github.com/Junyoung190198/OC_Project3.git
+https://junyoung190198.github.io/OC_Project3/
